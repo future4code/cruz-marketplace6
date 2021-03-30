@@ -26,7 +26,7 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
 
   -Link surge : 
   
-  -Link API:https://documenter.getpostman.com/view/9133542/TzCJfV67
+  -Link API: https://documenter.getpostman.com/view/9133542/TzCJfV67
   
   -Link Trello: 
 
