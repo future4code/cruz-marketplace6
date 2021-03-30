@@ -5,11 +5,12 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
 
 
 - **Integrantes do Projeto**
+
    -Dayane Lang
    
-   -Luana Farias da Silva
+   -Eduardo Silva   
    
-   -Eduardo Silva
+   -Luana Farias da Silva
    
    -Paulo Ribeiro
    
@@ -17,11 +18,18 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
    
    
 - **O que funciona**
+
 - **O que não funciona**
 
+
 - **LINKS**
+
   -Link surge : 
+  
   -Link API:https://documenter.getpostman.com/view/9133542/TzCJfV67
+  
   -Link Trello: 
 
-- **Imagens Interface 4Used*
+
+- **Imagens Interface 4Used**
+   
