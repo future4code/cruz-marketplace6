@@ -1,9 +1,23 @@
-### 4Used 3
+### 4Used MarketPlace
 
-Link da API: https://documenter.getpostman.com/view/9133542/TzCJfV67
+Apresentamos a vocês a startup 4used, voltada à compra e venda de produtos usados. 
+Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
 
-Não esqueçam de editar o readme com: 
-- Integrantes do grupo
-- O que funciona
-- O que não funciona
-- **LINK DO SURGE**
+
+- **Integrantes do Projeto**
+   -Dayane Lang
+   -Luana Farias da Silva
+   -Eduardo Silva
+   -Paulo Ribeiro
+   -Victor Milagres
+   
+   
+- **O que funciona**
+- **O que não funciona**
+
+- **LINKS**
+  -Link surge : 
+  -Link API:https://documenter.getpostman.com/view/9133542/TzCJfV67
+  -Link Trello: 
+
+- **Imagens Interface 4Used*
