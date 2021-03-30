@@ -40,7 +40,7 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
   
   -Documentação da API: https://documenter.getpostman.com/view/9133542/TzCJfV67
   
-  -Trello: 
+  -Trello: https://trello.com/b/BC429PkT/4used3
   
   
  - **Design System**
