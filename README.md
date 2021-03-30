@@ -36,7 +36,7 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
 
   - Surge : 
   
-  -Paleta de Cores utilizada: 
+  -Paleta de Cores utilizada: https://colorhunt.co/palette/264466
   
   -Documentação da API: https://documenter.getpostman.com/view/9133542/TzCJfV67
   
