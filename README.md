@@ -12,7 +12,7 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
    
    -Luana Farias da Silva
    
-   -Paulo Ribeiro
+   -Paulo Oliveira
    
    -Victor Milagres
    
