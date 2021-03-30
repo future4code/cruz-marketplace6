@@ -1,7 +1,7 @@
-### 4Used MarketPlace
+### 4Used3 MarketPlace
 
-Apresentamos a vocês a startup 4used, voltada à compra e venda de produtos usados. 
-Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
+Apresentamos a vocês a startup 4used3, voltada à compra e venda de produtos usados. 
+Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used3 é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
 
 
 - **Integrantes do Projeto**
@@ -16,20 +16,50 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
    
    -Victor Milagres
    
+     
    
 - **O que funciona**
+
+
 
 - **O que não funciona**
 
 
+ 
+
+- **Layout**
+- 
+  -Baseado no site enjoei.com .
+  
+
 - **LINKS**
 
-  -Link surge : 
+  - Surge : 
   
-  -Link API: https://documenter.getpostman.com/view/9133542/TzCJfV67
+  -Paleta de Cores utilizada: 
   
-  -Link Trello: 
+  -Documentação da API: https://documenter.getpostman.com/view/9133542/TzCJfV67
+  
+  -Trello: 
+  
+  
+ - **Design System**
+ 
+   -Material Design
+  
+  
+ - **Bibliotecas Utilizadas**
+ 
+     -npm install styled-components
+     
+     -npm install axios
+     
+     -npm install @material-ui/core
+     
+     -npm install @material-ui/icons
+ 
+ 
+- **Imagens Interface 4Used3**
 
 
-- **Imagens Interface 4Used**
    
