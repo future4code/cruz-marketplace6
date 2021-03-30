@@ -6,9 +6,13 @@ Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, arti
 
 - **Integrantes do Projeto**
    -Dayane Lang
+   
    -Luana Farias da Silva
+   
    -Eduardo Silva
+   
    -Paulo Ribeiro
+   
    -Victor Milagres
    
    
