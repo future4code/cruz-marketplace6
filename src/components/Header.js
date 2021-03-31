@@ -27,6 +27,13 @@ const DivSearch = styled.div`
         height: 35px;
         border: 0.1px solid lightgray;
         outline: none;
+        font-size: 18px;
+        color: grey;
+
+        ::placeholder {
+            font-size: 18px;
+            color: lightgray;
+        }
     }
 
     button {
@@ -35,6 +42,10 @@ const DivSearch = styled.div`
         background-color: #fff;
         cursor: pointer;
         border-left: 1px solid lightgrey;
+
+        :hover {
+            box-shadow: 1px 1px 4px grey;
+        }
         
         img {
             
@@ -53,6 +64,11 @@ const DivMenu = styled.div`
         background-color: #F04E3E;
         color: #fff;
         cursor: pointer;
+
+        :hover {
+            background-color: #ff4f3f;
+            box-shadow: 1px 1px 4px grey;
+        }
 
         :last-of-type {
             height: 60px;
@@ -82,7 +98,7 @@ export default class Header extends React.Component {
                     <img src={Logo} />
                 </DivLogo>
                 <DivSearch>
-                    <input/>
+                    <input placeholder='Buscar produto' />
                     <button> <img src={SearchIcon}/></button>
                 </DivSearch>
                 <DivMenu>
