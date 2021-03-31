@@ -3,8 +3,8 @@ import style from 'styled-components'
 
 
 const DivFiltro = style.div`
-    height: 500px;
-    width: 250px;
+    height: 30%;
+    width: 200px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 6px solid #eb5b34;
     border-radius: 10px;

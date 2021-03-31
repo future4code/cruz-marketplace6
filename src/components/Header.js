@@ -65,6 +65,7 @@ const DivMenu = styled.div`
         background-color: #F04E3E;
         color: #fff;
         cursor: pointer;
+        outline: none;
 
         :hover {
             background-color: #ff4f3f;
