@@ -1,7 +1,7 @@
 ### 4Used3 MarketPlace
 
 Apresentamos a vocês a startup 4used3, voltada à compra e venda de produtos usados. 
-Na 4used, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used3 é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
+Na 4used3, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used3 é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
 
 
 - **Integrantes do Projeto**
