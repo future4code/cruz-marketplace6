@@ -76,10 +76,17 @@ const Botao = style.button`
     
     
 `
+
+const Container = style.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 100px;
+`
 export default class Produtos extends React.Component{
 
     render(){
         return (
+            <Container>
                 <DivBox>
                     <Categoria>Moveis</Categoria>
                     <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
@@ -89,6 +96,52 @@ export default class Produtos extends React.Component{
                     <Parcelas>10x de R$69,90</Parcelas>
                     <Botao>Comprar</Botao>              
                 </DivBox>
+                <DivBox>
+                    <Categoria>Moveis</Categoria>
+                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
+                    <Titulo>Mesa de jantar</Titulo>
+                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
+                    <Preco>R$ 500,00</Preco>
+                    <Parcelas>10x de R$69,90</Parcelas>
+                    <Botao>Comprar</Botao>              
+                </DivBox>
+                <DivBox>
+                    <Categoria>Moveis</Categoria>
+                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
+                    <Titulo>Mesa de jantar</Titulo>
+                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
+                    <Preco>R$ 500,00</Preco>
+                    <Parcelas>10x de R$69,90</Parcelas>
+                    <Botao>Comprar</Botao>              
+                </DivBox>  
+                <DivBox>
+                    <Categoria>Moveis</Categoria>
+                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
+                    <Titulo>Mesa de jantar</Titulo>
+                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
+                    <Preco>R$ 500,00</Preco>
+                    <Parcelas>10x de R$69,90</Parcelas>
+                    <Botao>Comprar</Botao>              
+                </DivBox>
+                <DivBox>
+                    <Categoria>Moveis</Categoria>
+                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
+                    <Titulo>Mesa de jantar</Titulo>
+                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
+                    <Preco>R$ 500,00</Preco>
+                    <Parcelas>10x de R$69,90</Parcelas>
+                    <Botao>Comprar</Botao>              
+                </DivBox>
+                <DivBox>
+                    <Categoria>Moveis</Categoria>
+                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
+                    <Titulo>Mesa de jantar</Titulo>
+                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
+                    <Preco>R$ 500,00</Preco>
+                    <Parcelas>10x de R$69,90</Parcelas>
+                    <Botao>Comprar</Botao>              
+                </DivBox>
+            </Container>
             )}
 
 }

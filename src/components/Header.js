@@ -58,7 +58,8 @@ const DivMenu = styled.div`
     align-items: center;
 
     button {
-        height: 35px;
+        height: 45px;
+        border-radius: 5px;
         border: none;
         margin-right: 10px;
         background-color: #F04E3E;
