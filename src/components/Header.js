@@ -6,6 +6,7 @@ import CartIcon from './../img/cart.svg'
 import { CardCart } from "./CardCart/CardCart"
 
 
+
 const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -178,19 +179,9 @@ export default function Header() {
     const [clickModal, setClickModal] = useState(false);
     const [clickMenu, setClickMenu] = useState(false);
     const [clickCart, setClickCart] = useState(false);
-    const [cart, setCart] = useState({
-        name: "Produto",
-        description: "Esse é um produto muito legal!",
-        price: 10,
-        paymentMethod: "card",
-        category: "Categoria 1",
-        photos: ["https://picsum.photos/300/200"],
-        installments: 3
-    }); 
+    const [cart, setCart] = useState({}); 
 
-    // useEffect(() => {
-    //     setCart(true)
-    // },[]);
+    
     
     const deleteProduct = (id) => {
         const cartCopy = [...cart]
@@ -198,6 +189,7 @@ export default function Header() {
         setCart(removeProduct)
         
     }
+
 
     const handleClick = () => {
         setClickMenu(!clickMenu);

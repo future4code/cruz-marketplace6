@@ -13,3 +13,12 @@ export const createProduct = async (body) => {
 
 }
 
+export const getProduct = async () => {
+    try{
+        return await axios.get(baseUrl)
+        // console.log(res.data)
+    } catch(e){
+        console.log(e)
+    }
+}
+
