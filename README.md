@@ -1,9 +1,65 @@
-### 4Used 3
+### 4Used3 MarketPlace
 
-Link da API: https://documenter.getpostman.com/view/9133542/TzCJfV67
+Apresentamos a vocês a startup 4used3, voltada à compra e venda de produtos usados. 
+Na 4used3, pessoas podem colocar seus produtos usados à venda, como roupas, artigos de decoração, calçados, eletrônicos e móveis. A ideia da 4used3 é oferecer produtos com maior curadoria de tendências (roupas do momento, itens mais descolados etc), exigindo uma comunicação mais moderna e jovial.
 
-Não esqueçam de editar o readme com: 
-- Integrantes do grupo
-- O que funciona
-- O que não funciona
-- **LINK DO SURGE**
+
+- **Integrantes do Projeto**
+
+   -Dayane Lang
+   
+   -Eduardo Silva   
+   
+   -Luana Farias da Silva
+   
+   -Paulo Oliveira
+   
+   -Victor Milagres
+   
+     
+   
+- **O que funciona**
+
+
+
+- **O que não funciona**
+
+
+ 
+
+- **Layout**
+- 
+  -Baseado no site enjoei.com .
+  
+
+- **LINKS**
+
+  - Surge : 
+  
+  -Paleta de Cores utilizada: https://colorhunt.co/palette/264466
+  
+  -Documentação da API: https://documenter.getpostman.com/view/9133542/TzCL8oQX
+  
+  -Trello: https://trello.com/b/BC429PkT/4used3
+  
+  
+ - **Design System**
+ 
+   -Material Design
+  
+  
+ - **Bibliotecas Utilizadas**
+ 
+     -npm install styled-components
+     
+     -npm install axios
+     
+     -npm install @material-ui/core
+     
+     -npm install @material-ui/icons
+ 
+ 
+- **Imagens Interface 4Used3**
+
+
+   
