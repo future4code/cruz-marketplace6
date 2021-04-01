@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
+import styled, { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import * as api from "./api/4used"
 

@@ -12,8 +12,11 @@ import {
   CartIcon,
   CartContainer,
   CartContent,
+  CartHeader,
+  CartBottom
 } from "./NavbarElements";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa"; 
+import { CardCart } from "../Product/CardCart/CardCart"
 
 const Navbar = () => {
   const [clickModal, setClickModal] = useState(false);
@@ -66,9 +69,23 @@ const Navbar = () => {
         </NavbarContainer>
       </Nav>
       <CartContainer cart={cart}>
+        <CartHeader>
+          <h4>CARRINHO DE COMPRAS:</h4>
+        </CartHeader>
         <CartContent>
-         
+          <CardCart />
+          <CardCart />
+          <CardCart />
+          <CardCart />
+          <CardCart />
+          <CardCart />
+          <CardCart />
         </CartContent>
+        <CartBottom>
+          <div><span>Subtotal:</span><span>R$ 5.545,00</span></div>
+          <div><span>Frete:</span><span>R$ 5.545,00</span></div>
+          <button>FINALIZAR COMPRA</button>
+        </CartBottom>
       </CartContainer>
     </>
   );

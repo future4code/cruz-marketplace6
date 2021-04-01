@@ -1,11 +1,24 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, injectGlobal } from "styled-components";
+/* 
+injectGlobal`
+  @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;500;700&display=swap');
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Recursive', sans-serif;
+  }
 
-const GlobalStyle = createGlobalStyle`
+  h1 {
+    font-family: Montserrat;
+  }
+`; */
+
+export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
   }
 `;
 

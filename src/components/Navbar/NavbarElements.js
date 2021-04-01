@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
+import CardCart from "../Product/CardCart/CardCart";
 
 export const Nav = styled.nav`
   border-bottom: 1px solid #d6d6d6;
@@ -103,21 +104,77 @@ export const NavLinks = styled(Link)`
   }
 `;
 
+/** ********************
+ *  ******* CART *******
+ *  ********************/
+
 export const CartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   height: 100%;
-  width: 250px;
+  width: 280px;
   background: #fff;
   transition: all .3s ease-out;
   right: ${({cart}) => (cart ? 0 : '-100%')};
 `
 
 export const CartContent = styled(Container)`
+  postion: absolute;
+  overflow-y: scroll;
+  flex-flow: column nowrap;
   position: relative;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 40px;  
+  padding: 5px 16px;  
   ${Container}
+`
+export const CartHeader = styled.div`
+  background: #f4f4f4;
+  z-index: 999;
+  box-shadow: 0px 0px 4px #999;
+  postion: absolute;
+  width: 100%;
+  & h4 {
+    padding: 14px 10px;
+  }
+`
+
+export const CartBottom = styled.div`
+  z-index: 999;
+  border-top: 1px solid #d6d6d6;
+  background: #e8e8e8;
+  box-shadow: 0px 0px 4px #999;
+  postion: fixed;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  & div {
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px;
+  }
+  & div:last-of-type {
+    margin-bottom: 10px;
+  }
+  & span:last-child {
+    font-weight: bold;
+  }
+  & span:first-child{
+    color: #555;
+  }
+  & button {
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(236,30,13,1) 0%, rgba(215,57,39,1) 50%, rgba(215,57,39,1) 100%);
+    width: 100%;
+    border: 0;
+    padding: 10px;
+  }
 `
