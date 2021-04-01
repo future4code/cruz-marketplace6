@@ -1,5 +1,6 @@
-import React from 'react'
-import AppContainer from './components/createProductSell'
+import React from 'react';
+import AppContainer from './components/AppContainer';
+
 
 function App() {
 	return (
@@ -7,6 +8,6 @@ function App() {
 	)
 }
 
-export default App
+export default App;
 
 

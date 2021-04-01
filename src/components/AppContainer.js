@@ -1,69 +1,200 @@
 import React, { Component } from "react";
+import { createProduct } from "../api/api";
 import styled from "styled-components";
-import createProductSell from "../components/createProductSell";
+ // eslint-disable-next-line
 
-
-export const ComponentsContainer = styled.div`
-  width: 100%;
+const InputProductPrice = styled.input`
+  text-align: right;
 `;
 
-export const ScreenComponents = styled.div`
-  padding: 0 5em;
-`;
-
-export class AppContainer extends Component {
-  state = {
-    renderedScreen: "home",
-  };
-
-  handleHomeLink = () => {
-    this.setState({ renderedScreen: "home" });
-  };
-
-  handleSalesLink = () => {
-    this.setState({ renderedScreen: "sales" });
-  };
-
-  handleStoreLink = () => {
-    this.setState({ renderedScreen: "store" });
-  };
-
-  handleProductDetails = () => {
-    this.setState({ renderedScreen: "product" });
-  };
-
-  render() {
-    const rendersScreen = () => {
-      switch (this.state.renderedScreen) {
-        case "home":
-          return (
-            <Home
-              renderSalesScreenProps={this.handleSalesLink}
-              renderStoreScreenProps={this.handleStoreLink}
-            />
-          );
-        case "store":
-          return (
-            <Store
-              renderProductDetailsScreenProps={this.handleProductDetails}
-            />
-          );
-        case "product":
-          return <ProductDetails />;
-        case "sales":
-          return <CreateProductToSell />;
-      }
+export default class AppContainer extends Component {
+    state = {
+       productCategory: "",
+       productName: "",
+       productDescription: "",
+       productNewUsed: "",
+       productPrice: "",
+       productInstallement: 1,
+       productPaymentMethod: "",
+       productLink: "",
     };
 
+    handleProductCategory = (e) => {
+      this.setState({ productCategory: e.target.value });
+    };
+
+    handleInputproductName = (e) => {
+      this.setState({ productName: e.target.value });
+    };
+
+    handleInputProductDescription = (e) => {
+      this.setState({ productDescription: e.target.value });
+    };
+
+    handleProductNewUsade = (e) => {
+      this.setState({ productNewUsed: e.target.value });
+    };
+
+    handleInputProductPrice = (e) => {
+      this.setState({ productPrice: e.target.value });
+    };
+
+    handleProductPaymentMethod = (e) => {
+      if (this.state.handleProductPaymentMethod === "Cartão de Crédito") {
+          this.setState({ productInstallement: 1 });
+      } 
+      this.setState({ productPaymentMethod: e.target.value });
+      };
+
+    handleSelectInstallement = (e) => {
+      this.setState({ productInstallement: e.target.value });
+    };
+
+    handleInputProductLink = (e) => {
+      this.setState({ productLink: e.target.value });
+    };
+
+    cleanInstallment = (e) => {
+      this.setState({ productInstallment: 1 });
+    };
+
+
+    newProductSell = () => {
+      const newCardProduct = {
+        category: this.state.productCategory,
+        name: this.state.productName,
+        description: this.state.productDescription,
+        price: Number(this.state.productPrice),
+        installments: Number(this.state.productInstallments),
+        paymentMethod: this.state.productPaymentMethod,
+        photos: [this.state.productLink],
+      };
+        //console.log("Teste");
+      // eslint-disable-next-line no-whitespace-before-property
+      createProduct(newCardProduct).then((res) => {
+        console.log(res.config.data);
+        alert("Produto Adicionado com Sucesso!");
+      this.setState({
+        productCategory: "",
+        productName: "",
+        productDescription: "",
+        productNewUsed: "",
+        productPrice: "",
+        productInstallement: 1,
+        productPaymentMethod: "",
+        productLink: "",
+      });
+    }) .catch((er) => {
+      console.log(er);
+    });
+      
+  };
+  
+  render() {
+    const installments = this.state.productPaymentMethod ===
+      "Cartão de Crédito" && (
+      <div>
+        <select onChange={this.handleSelectInstallment} value={this.state.productInstallments}>
+          <option value={1}> 1</option>
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
+          <option value={6}>6</option>
+          <option value={7}>7</option>
+          <option value={8}>8</option>
+          <option value={9}>9</option>
+          <option value={10}>10</option>
+          <option value={11}>11</option>
+          <option value={12}>12</option>
+        </select>
+      </div>
+    );
+
+/**
+ //chamar a Appi
+ <Api />
+ * axios
+      .post( baseUrl, body, {} )
+
+      .then((resp) => {
+        console.log(resp.config.data);
+        alert("Produto Adicionado com sucesso!");
+        this.setState({
+          productName: "",
+          productCategory: "",
+          productLink: "",
+          productPaymentMethod: "",
+        });
+      })
+      .catch((er) => {
+        console.log(body);
+      });
+
+     	)
+  ;
+  **/
+    
     return (
-      <ComponentsContainer>
-        <Navbar
-          renderHomeScreenProps={this.handleHomeLink}
-          renderBuyScreenProps={this.handleSalesLink}
-          renderStoreScreenProps={this.handleStoreLink}
+      <div>
+        <h1>Insira o seu Produto</h1>
+        <p>Informe o Nome do seu Produto</p>
+        <input
+          value={this.state.productName}
+          onChange={this.handleInputProductName}
         />
-        <ScreenComponents>{rendersScreen()}</ScreenComponents>
-      </ComponentsContainer>
+
+        <p>Informe a Categoria do seu Produto</p>
+        <select onChange={this.handleProductCategory} value={this.state.productCategory}>
+          <option value=""></option>
+          <option value="Acessórios">Acessório</option>
+          <option value="Roupas">Roupa</option>
+          <option value="Calçados">Calçado</option>
+          <option value="Brinquedos">Brinquedo</option>
+          <option value="Móveis">Móvel</option>
+          <option value="Vintage">Produtos Vintage</option>          
+          <option value="Eletrônicos">Eletrônico</option>
+        </select>
+
+        <p>Descrição do Produto</p>
+          <input
+            onChange={this.handleInputDescription}
+            value={this.state.productDescription}
+          />
+       
+        <p>Estado do Produto</p>
+        <div>
+          <select onChange={this.handleProductNewUsade} value={this.state.productNewUsed}>
+            <option value="new">Novo</option>
+            <option value="used">Usado</option>
+          </select>
+         </div> 
+        
+         <p>Valor do Produto</p>
+          <InputProductPrice 
+              type="number" value={this.state.productPrice} 
+              onChange={this.handleInputProductPrice}
+          >
+          </InputProductPrice>
+        <span> R$</span>
+        <p>Forma de Pagamento</p>
+        <div>
+          <select onChange={this.handleProductPaymentMethod} value={this.state.productPaymentMethod}>
+            <option value=""></option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Cartão de Débito">Cartão de Débito</option>
+            <option value="Boleto">Boleto</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Depósito">PIX</option>
+          </select>
+          <div>{installments}</div>
+        </div>
+        <p>Link Imagem</p>
+        <input value={this.state.productLink} onChange={this.handleInputProductLink}></input>
+
+        <button onClick={this.newProductSell}>Criar Produto</button>
+      </div>
     );
   }
 }
+
