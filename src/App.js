@@ -1,9 +1,9 @@
 import React from 'react'
-import { AppContainer } from './components/AppContainer'
+import AppContainer from './components/createProductSell'
 
 function App() {
 	return (
-        <AppContainer />
+        < AppContainer />
 	)
 }
 

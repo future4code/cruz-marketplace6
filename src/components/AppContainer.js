@@ -1,27 +1,69 @@
 import React, { Component } from "react";
-import { createProduct } from "../api/api";
+import styled from "styled-components";
+import createProductSell from "../components/createProductSell";
 
-export function AppContainer() {
-  const product1 = () => {
-    const newProduct = {
-      name: "Produto",
-      description: "Esse é um produto muito legal!",
-      price: 10,
-      paymentMethod: "card",
-      category: "Categoria 1",
-      photos: ["https://picsum.photos/300/200"],
-      installments: 3,
-    };
-    console.log("Teste");
-    createProduct(newProduct).then((res) => {
-      console.log(res);
-    });
+
+export const ComponentsContainer = styled.div`
+  width: 100%;
+`;
+
+export const ScreenComponents = styled.div`
+  padding: 0 5em;
+`;
+
+export class AppContainer extends Component {
+  state = {
+    renderedScreen: "home",
   };
 
-  return (
-    <div>
-      <p>Pronto para começar!</p>
-      <button onClick={product1}>Clique</button>
-    </div>
-  );
+  handleHomeLink = () => {
+    this.setState({ renderedScreen: "home" });
+  };
+
+  handleSalesLink = () => {
+    this.setState({ renderedScreen: "sales" });
+  };
+
+  handleStoreLink = () => {
+    this.setState({ renderedScreen: "store" });
+  };
+
+  handleProductDetails = () => {
+    this.setState({ renderedScreen: "product" });
+  };
+
+  render() {
+    const rendersScreen = () => {
+      switch (this.state.renderedScreen) {
+        case "home":
+          return (
+            <Home
+              renderSalesScreenProps={this.handleSalesLink}
+              renderStoreScreenProps={this.handleStoreLink}
+            />
+          );
+        case "store":
+          return (
+            <Store
+              renderProductDetailsScreenProps={this.handleProductDetails}
+            />
+          );
+        case "product":
+          return <ProductDetails />;
+        case "sales":
+          return <CreateProductToSell />;
+      }
+    };
+
+    return (
+      <ComponentsContainer>
+        <Navbar
+          renderHomeScreenProps={this.handleHomeLink}
+          renderBuyScreenProps={this.handleSalesLink}
+          renderStoreScreenProps={this.handleStoreLink}
+        />
+        <ScreenComponents>{rendersScreen()}</ScreenComponents>
+      </ComponentsContainer>
+    );
+  }
 }
