@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Logo from './../img/logo.png'
 import SearchIcon from './../img/search.svg'
@@ -177,7 +177,27 @@ export const BlockMobileIcon = styled.div`
 export default function Header() {
     const [clickModal, setClickModal] = useState(false);
     const [clickMenu, setClickMenu] = useState(false);
-    const [cart, setCart] = useState(false);
+    const [clickCart, setClickCart] = useState(false);
+    const [cart, setCart] = useState({
+        name: "Produto",
+        description: "Esse é um produto muito legal!",
+        price: 10,
+        paymentMethod: "card",
+        category: "Categoria 1",
+        photos: ["https://picsum.photos/300/200"],
+        installments: 3
+    }); 
+
+    // useEffect(() => {
+    //     setCart(true)
+    // },[]);
+    
+    const deleteProduct = (id) => {
+        const cartCopy = [...cart]
+        const removeProduct = cartCopy.filter(item => item.id !== id)
+        setCart(removeProduct)
+        
+    }
 
     const handleClick = () => {
         setClickMenu(!clickMenu);
@@ -185,14 +205,14 @@ export default function Header() {
     };
 
     const handleClickCart = () => {
-        setCart(!cart);
+        setClickCart(!clickCart);
         setClickModal(!clickModal);
     };
 
     const handleClickOff = () => {
         setClickMenu(false);
         setClickModal(false);
-        setCart(false);
+        setClickCart(false);
     }
 
     return (
@@ -213,18 +233,12 @@ export default function Header() {
             </HeaderContainer>
             <DivSubHeader>
             </DivSubHeader>
-            <CartContainer cart={cart}>
+            <CartContainer cart={clickCart}>
                 <CartHeader>
                     <h4>CARRINHO DE COMPRAS:</h4>
                 </CartHeader>
                 <CartContent>
-                    <CardCart />
-                    <CardCart />
-                    <CardCart />
-                    <CardCart />
-                    <CardCart />
-                    <CardCart />
-                    <CardCart />
+                    <CardCart cart={cart} deleteProduct={deleteProduct}/>
                 </CartContent>
                 <CartBottom>
                     <div><span>Subtotal:</span><span>R$ 5.545,00</span></div>
