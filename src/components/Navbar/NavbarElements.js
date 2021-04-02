@@ -109,6 +109,7 @@ export const NavLinks = styled(Link)`
  *  ********************/
 
 export const CartContainer = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -136,6 +137,7 @@ export const CartHeader = styled.div`
   background: #f4f4f4;
   z-index: 999;
   box-shadow: 0px 0px 4px #999;
+  border-bottom: 1px solid #c3c3c3;
   postion: absolute;
   width: 100%;
   & h4 {
@@ -145,7 +147,7 @@ export const CartHeader = styled.div`
 
 export const CartBottom = styled.div`
   z-index: 999;
-  border-top: 1px solid #d6d6d6;
+  border-top: 1px solid #c3c3c3;
   background: #e8e8e8;
   box-shadow: 0px 0px 4px #999;
   postion: fixed;
