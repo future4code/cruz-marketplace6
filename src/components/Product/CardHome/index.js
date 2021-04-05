@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as c from "./styles"
+import React from "react";
 
 function CardHome(props) {
     const { product: { category, price, name, photos } } = props;
