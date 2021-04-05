@@ -85,11 +85,33 @@ const Container = style.div`
     
 `
 export default class Produtos extends React.Component{
+    state = {
+        cart: []
+    }
+
+    // const addToCart = () = {
+
+    // }
 
     render(){
+
+        // const productList = this.props.products.map(item => {
+        //     return (
+        //         <DivBox>
+        //             <Categoria>{item.category}</Categoria>
+        //             <Imagem src={item.photos}/>
+        //             <Titulo>{item.name}</Titulo>
+        //             <Descricao>{item.description}</Descricao>
+        //             <Preco>{item.price}</Preco>
+        //             <Parcelas>{item.installements}</Parcelas>
+        //             <Botao>Comprar</Botao>              
+        //         </DivBox>
+        //     )
+        // })
         return (
             <Container>
-                <DivBox>
+
+                {/* <DivBox>
                     <Categoria>Moveis</Categoria>
                     <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
                     <Titulo>Mesa de jantar</Titulo>
@@ -97,52 +119,8 @@ export default class Produtos extends React.Component{
                     <Preco>R$ 500,00</Preco>
                     <Parcelas>10x de R$69,90</Parcelas>
                     <Botao>Comprar</Botao>              
-                </DivBox>
-                <DivBox>
-                    <Categoria>Moveis</Categoria>
-                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
-                    <Titulo>Mesa de jantar</Titulo>
-                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
-                    <Preco>R$ 500,00</Preco>
-                    <Parcelas>10x de R$69,90</Parcelas>
-                    <Botao>Comprar</Botao>              
-                </DivBox>
-                <DivBox>
-                    <Categoria>Moveis</Categoria>
-                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
-                    <Titulo>Mesa de jantar</Titulo>
-                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
-                    <Preco>R$ 500,00</Preco>
-                    <Parcelas>10x de R$69,90</Parcelas>
-                    <Botao>Comprar</Botao>              
-                </DivBox>  
-                <DivBox>
-                    <Categoria>Moveis</Categoria>
-                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
-                    <Titulo>Mesa de jantar</Titulo>
-                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
-                    <Preco>R$ 500,00</Preco>
-                    <Parcelas>10x de R$69,90</Parcelas>
-                    <Botao>Comprar</Botao>              
-                </DivBox>
-                <DivBox>
-                    <Categoria>Moveis</Categoria>
-                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
-                    <Titulo>Mesa de jantar</Titulo>
-                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
-                    <Preco>R$ 500,00</Preco>
-                    <Parcelas>10x de R$69,90</Parcelas>
-                    <Botao>Comprar</Botao>              
-                </DivBox>
-                <DivBox>
-                    <Categoria>Moveis</Categoria>
-                    <Imagem src='https://www.dlojavirtual.com/wp-content/uploads/2018/05/198748-entenda-como-funcionam-os-sites-de-compras-confiaveis.jpg'/>
-                    <Titulo>Mesa de jantar</Titulo>
-                    <Descricao>Lorem ipsum dolor sit amet, consectetur adipisicing elit</Descricao>
-                    <Preco>R$ 500,00</Preco>
-                    <Parcelas>10x de R$69,90</Parcelas>
-                    <Botao>Comprar</Botao>              
-                </DivBox>
+                </DivBox> */}
+              
             </Container>
             )}
 
