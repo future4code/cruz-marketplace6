@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Nav,
   NavbarContainer,
@@ -14,14 +14,17 @@ import {
   CartContent,
   CartHeader,
   CartBottom
-} from "./NavbarElements";
-import { FaBars, FaTimes } from "react-icons/fa"; 
-import { CardCart } from "../Product/CardCart/CardCart"
+} from "./styles";
+import { CardCart } from "../Product/CardCart"
+import { CartContext } from "../../store";
+import Logo from '../../assets/img/logo.png'
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [clickModal, setClickModal] = useState(false);
   const [clickMenu, setClickMenu] = useState(false);
   const [cart, setCart] = useState(false);
+
+  const [cartCtx, setCartCtx, addItemCart, rmItemCart, subTotal, total] = useContext(CartContext);
 
   const handleClick = () => {
     setClickMenu(!clickMenu);
@@ -33,34 +36,35 @@ const Navbar = () => {
     setClickModal(!clickModal);
   };
 
-  const handleClickOff = () => {
+  const handleClickOff = (srting) => {
     setClickMenu(false);
     setClickModal(false);
     setCart(false);
+    props.setPage(srting);
   }
-
+  
   return (
     <>
       <Nav>
         <NavbarContainer>
           <div className="align">
-            <NavLogo to="/">Logotipo</NavLogo>
-            <SearchBar />
+            <NavLogo to="/"><img src={Logo} alt="logo" title="logo" /></NavLogo>
+            <SearchBar placeholder="Procurando por..." />
           </div>
           <CartIcon onClick={handleClickCart} cart={cart}>
-            Carrinho
+            Carrinho<span>{total}</span>
           </CartIcon>
           <MobileIcon onClick={handleClick} clickMenu={clickMenu}>
-            {clickMenu ? <FaTimes /> : <FaBars />}
+            {clickMenu ? '+' : '-'}
           </MobileIcon>
-          <BlockMobileIcon onClick={handleClickOff} modal={clickModal}>
+          <BlockMobileIcon onClick={() => handleClickOff(props.page)} modal={clickModal}>
           </BlockMobileIcon>
           <NavMenu click={clickMenu}>
             <NavItem>
-              <NavLinks onClick={handleClickOff} to="/">Home</NavLinks>
+              <NavLinks onClick={() => handleClickOff('home')} to="/">Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks onClick={handleClickOff} to="/home">Produtos</NavLinks>
+              <NavLinks onClick={() => handleClickOff('cadastrar')} to="/home">Cadastrar Produtos</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks onClick={handleClickOff} to="/outro">Categorias</NavLinks>
@@ -73,17 +77,13 @@ const Navbar = () => {
           <h4>CARRINHO DE COMPRAS:</h4>
         </CartHeader>
         <CartContent>
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
+            {cartCtx.map((i, key) => {
+              return <CardCart addItem={() => addItemCart(i.produto, i.produto.id, cartCtx, setCartCtx)} rmItem={() => rmItemCart(key)} product={i} setCartDel={setCartCtx} getCart={cartCtx} key={Math.random().toString(36).substr(2, 10)}/>
+            })}
         </CartContent>
         <CartBottom>
-          <div><span>Subtotal:</span><span>R$ 5.545,00</span></div>
-          <div><span>Frete:</span><span>R$ 5.545,00</span></div>
+          <div><span>Subtotal:</span><span>{subTotal}</span></div>
+          <div><span>Frete:</span><span>{}</span></div>
           <button>FINALIZAR COMPRA</button>
         </CartBottom>
       </CartContainer>
