@@ -20,11 +20,20 @@ Na 4used3, pessoas podem colocar seus produtos usados à venda, como roupas, art
    
 - **O que funciona**
 
-
+    .Inclusão de artigos no carrinho.
+    .Botão Home.
+    .Filtro de artigos
+    .Inclusão de novo artigo.
 
 - **O que não funciona**
 
-
+  .Busca de produto.
+  .Arrumar itens cadastrados.
+  .Link Categorias e cadastro de produto respondem ao mesmo.
+  -Logo traz link sem retorno.
+  -Contador carrinho responde com valores inusitários.
+  -Footer está sem redes sociais.
+  
  
 
 - **Layout**
@@ -60,6 +69,12 @@ Na 4used3, pessoas podem colocar seus produtos usados à venda, como roupas, art
  
  
 - **Imagens Interface 4Used3**
+
+![image](https://user-images.githubusercontent.com/77943169/113713754-11b59e80-96be-11eb-8f6e-6a50085af077.png)
+![image](https://user-images.githubusercontent.com/77943169/113713907-3d388900-96be-11eb-8116-14d4d5c72676.png)
+![image](https://user-images.githubusercontent.com/77943169/113714434-c354cf80-96be-11eb-8d94-9973c9ddb5bc.png)
+
+
 
 
    
